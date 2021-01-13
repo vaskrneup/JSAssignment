@@ -1,6 +1,5 @@
 console.log("===========================================================================")
 console.log("                              OBJECTS JS")
-console.log("===========================================================================")
 
 const myInfo = {
     name: "Bhaskar Neupane",
@@ -26,6 +25,4 @@ for (let i = 0; i < myInfo.education.length; i++) {
     console.log("Name:", educationDetail["name"], "Date:", educationDetail["enrolledDate"])
 }
 
-console.log("===========================================================================")
 console.log("                             END OBJECTS JS")
-console.log("===========================================================================")

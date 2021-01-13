@@ -1,6 +1,5 @@
 console.log("===========================================================================")
 console.log("                              SEARCH JS")
-console.log("===========================================================================")
 
 const fruits = [
     {id: 1, name: 'Banana', color: 'Yellow'},
@@ -29,6 +28,4 @@ function searchByName(data, name) {
 console.log(searchByName(fruits, "apple"))
 console.log(searchByKey(fruits, "id", 1))
 
-console.log("===========================================================================")
 console.log("                             END SEARCH JS")
-console.log("===========================================================================")
