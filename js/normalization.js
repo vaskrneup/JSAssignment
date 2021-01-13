@@ -47,12 +47,13 @@ function getNormalizedData(data) {
     }
 
     const normalizedData = {};
-    addNormalizedData(data);
+    addNormalizedData(JSON.parse(JSON.stringify(data)));
     return normalizedData;
 }
 
 
 console.log(getNormalizedData(input))
+console.log(input)
 
 
 console.log("                             END NORMALIZATION JS")
