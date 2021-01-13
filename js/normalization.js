@@ -18,35 +18,41 @@ const input = {
     }
 };
 
-const final = {};
 
-function getDict(obj) {
-    const keys = Object.keys(obj);
-    if (obj.id) {
-        final[obj.id.toString()] = obj
-    }
+function getNormalizedData(data) {
+    function addNormalizedData(obj) {
+        const keys = Object.keys(obj);
+        if (obj.id) {
+            normalizedData[obj.id.toString()] = obj
+        }
 
-    for (let i = 0; i < keys.length; i++) {
-        const key = keys[i];
-        const value = obj[key];
+        for (let i = 0; i < keys.length; i++) {
+            const key = keys[i];
+            const value = obj[key];
 
-        if (Array.isArray(value)) {
-            const children = [];
+            if (Array.isArray(value)) {
+                const children = [];
 
-            for (let i = 0; i < value.length; i++) {
-                const arrayData = value[i];
-                children.push(arrayData.id);
-                getDict(arrayData);
+                for (let i = 0; i < value.length; i++) {
+                    const arrayData = value[i];
+                    children.push(arrayData.id);
+                    addNormalizedData(arrayData);
+                }
+
+                obj[key] = children;
+            } else if (typeof value === "object") {
+                addNormalizedData(value);
             }
-            obj[key] = children;
-        } else if (typeof value === "object") {
-            getDict(value);
         }
     }
+
+    const normalizedData = {};
+    addNormalizedData(data);
+    return normalizedData;
 }
 
 
-getDict(input)
-console.log(final)
+console.log(getNormalizedData(input))
+
 
 console.log("                             END NORMALIZATION JS")
