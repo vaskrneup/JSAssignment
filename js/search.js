@@ -1,15 +1,19 @@
+console.log("===========================================================================")
+console.log("                              SEARCH JS")
+console.log("===========================================================================")
+
 const fruits = [
     {id: 1, name: 'Banana', color: 'Yellow'},
     {id: 2, name: 'Apple', color: 'Red'}
 ];
 
 function searchByKey(data, key, value) {
-    value = value.toLowerCase();
+    value = value.toString().toLowerCase();
 
     for (let i = 0; i < data.length; i++) {
         const _data = data[i];
 
-        if (_data[key].toLowerCase() === value) {
+        if (_data[key].toString().toLowerCase() === value) {
             return _data;
         }
     }
@@ -23,4 +27,8 @@ function searchByName(data, name) {
 
 
 console.log(searchByName(fruits, "apple"))
-console.log(searchByKey(fruits, "name", "apple"))
+console.log(searchByKey(fruits, "id", 1))
+
+console.log("===========================================================================")
+console.log("                             END SEARCH JS")
+console.log("===========================================================================")

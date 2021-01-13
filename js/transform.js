@@ -1,3 +1,7 @@
+console.log("===========================================================================")
+console.log("                              TRANSFORM JS")
+console.log("===========================================================================")
+
 let numbers = [1, 2, 3, 4];
 
 function transform(collection, tranFunc) {
@@ -17,3 +21,6 @@ let output = transform(numbers, function (num) {
 });
 
 console.log(output)
+console.log("===========================================================================")
+console.log("                             END TRANSFORM JS")
+console.log("===========================================================================")
