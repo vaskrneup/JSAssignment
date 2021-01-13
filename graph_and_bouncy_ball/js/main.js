@@ -1,3 +1,5 @@
+const pointSize = +prompt("Plot Point Size, if invalid provided 9 will be used") || 9;
+
 const points = [
     {x: 10, y: 20},
     {x: 40, y: 40},
@@ -5,7 +7,6 @@ const points = [
 ];
 
 const canvas = document.getElementById("bouncy-ball");
-const pointSize = 4;
 
 function handlePointRemoval(e) {
     canvas.removeChild(e.target);
