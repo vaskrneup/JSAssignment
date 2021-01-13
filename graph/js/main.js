@@ -6,7 +6,7 @@ const points = [
     {x: 60, y: 20},
 ];
 
-const canvas = document.getElementById("bouncy-ball");
+const canvas = document.getElementById("graph");
 
 function handlePointRemoval(e) {
     canvas.removeChild(e.target);
