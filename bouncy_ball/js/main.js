@@ -29,8 +29,6 @@ function animateBall() {
         currentHeight -= s;
     }
 
-    ball.style.top = currentHeight;
-
     ball.style.top = currentHeight + "px";
 
     requestAnimationFrame(animateBall);
